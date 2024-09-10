@@ -19,11 +19,12 @@ Efter genomgång görs övningar nedan i par.
 * Visa routes `GET /fruits` och `/views/fruits/index.erb`
 * Visa `layout.erb`
 * Visa SQL:
+    * *DB Browser for SQLite*
+    * *SQLBolt*
     * `db/seeder.rb`
     * `db/fruits.sqlite`
     * `app.rb/db-metoden` 
-    * *DB Browser for SQLite*
-    * *SQLBolt*
+    * @fruit = db.execute('SELECT * FROM fruits WHERE id=?',id).first
 
 ## Uppgifter 1 (i par)
 1. Gör *SQLBolt* t.o.m. **övning 5**.

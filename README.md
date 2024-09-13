@@ -27,7 +27,7 @@ Efter genomgång görs övningar nedan **i par**.
     * `views/layout.erb`
     * `db.execute('SELECT * FROM fruits WHERE id=?',id).first`
 
-## Uppgifter 1
+### Uppgifter 1
 1. Gör *SQLBolt* t.o.m. **övning 2**.
 2. Testa att sortera om frukterna på t.ex. ID. Du behöver uppdatera SQL-koden: `db.execute('SELECT * FROM fruits')`
 3. Lägg till ca 5 nya frukter mha. `db/seeder.rb`. För att spara datan till databasen kör du `rake seed`
@@ -44,31 +44,28 @@ Efter genomgång görs övningar nedan **i par**.
 * Ruby hashes
 * SQL Injections
 
-## Uppgifter 2
+### Uppgifter 2
 1. Gör *SQLBolt* t.o.m. **övning 10**.
-2. Fortsätt där ni slutade på uppgifter #1
+2. Gör alla uppgifter på #1
 
 ## Genomgång 3 (todo)
-* Formulär
+* [Spara data](https://ntijoh.github.io/webbserverprogrammeringsboken/#_insert) med [formulär](https://ntijoh.github.io/webbserverprogrammeringsboken/#_formulär)
 * GET vs. POST
 * Params
-* Ta bort en frukt
 
-## Uppgifter 3
-1. Gör SQL Bolt t.o.m. övning 15.
+### Uppgifter 3
+1. Gör *SQLBolt* t.o.m. **övning 15**.
 2. Lägg till ett formulär för att skapa en ny frukt. Börja med routen `GET '/fruits/new'`. 
     * För att spara frukten behöver du skicka datat från formuläret till `POST '/fruits/new'`.
-3. Gör en ta-bort-knapp som tar bort en frukt.
-4. Gör en ändra-knapp
-5. Utöka funktionerna.
+3. Gör en knapp som tar bort en frukt.
+4. Utöka funktionerna.
     * Utforska och lägg till de funktioner du tycker behövs
     * Lägg till bilder (eller ikoner) till frukterna
-    * Lägg till kategorier för frukter & grönsaker
 
 ## Genomgång 4 (todo)
-* Uppdatera
-* CRUD
-
-## Uppgifter 4
-* Uppdatera en frukt
+* [Uppdatera data](https://ntijoh.github.io/webbserverprogrammeringsboken/#_requests_routing)
 * C.R.U.D.
+
+### Uppgifter 4
+* Lägg funktioner för att uppdatera datan för en frukt
+* Lägg till kategorier för frukter & grönsaker

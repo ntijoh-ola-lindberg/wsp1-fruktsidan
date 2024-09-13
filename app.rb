@@ -19,16 +19,15 @@ class App < Sinatra::Base
     #Routen hämtar alla frukter i databasen
     get '/fruits' do
         @fruits = db.execute('SELECT * FROM fruits')
+        p @fruits
         erb(:"fruits/index")
     end
 
-    # Övning no. 2.1
     # Routen visar ett formulär för att spara en ny frukt till databasen.
     get '/fruits/new' do 
         erb(:"fruits/new")
     end
 
-    # Övning no. 2.2
     # Routen sparar en frukt till databasen och gör en redirect till '/fruits'.
     post '/fruits' do 
         p params
@@ -37,7 +36,7 @@ class App < Sinatra::Base
     # Övning no. 1
     # Routen visar all info (från databasen) om en frukt.
     get '/fruits/:id' do | id |
-        @fruit = db.execute('SELECT * FROM fruits WHERE id=?',id).first
+        #todo hämta data från databasen för frukten. Använd id.
         erb(:"fruits/show")
     end
 

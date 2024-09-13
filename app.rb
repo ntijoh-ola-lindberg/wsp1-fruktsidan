@@ -32,12 +32,12 @@ class App < Sinatra::Base
     # Routen sparar en frukt till databasen och gör en redirect till '/fruits'.
     post '/fruits' do 
         p params
-        #todo
     end
 
     # Övning no. 1
-    # Routen visar en lista på alla frukter i databasen.
+    # Routen visar all info (från databasen) om en frukt.
     get '/fruits/:id' do | id |
+        @fruit = db.execute('SELECT * FROM fruits WHERE id=?',id).first
         erb(:"fruits/show")
     end
 

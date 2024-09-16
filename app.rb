@@ -10,7 +10,7 @@ class App < Sinatra::Base
 
         return @db
     end
-    
+
     # Routen gör en redirect till '/fruits'
     get '/' do
         redirect('/fruits')
@@ -24,13 +24,18 @@ class App < Sinatra::Base
     end
 
     # Routen visar ett formulär för att spara en ny frukt till databasen.
-    get '/fruits/new' do 
+    get '/fruits/new' do
         erb(:"fruits/new")
     end
 
     # Routen sparar en frukt till databasen och gör en redirect till '/fruits'.
-    post '/fruits' do 
-        p params
+    post '/fruits' do
+      name = params["fruit_name"]
+      description = params["fruit_description"]
+
+	    db.execute("INSERT INTO fruits (name, description) VALUES(?,?)", [name, description])
+
+			redirect("/fruits")
     end
 
     # Övning no. 1

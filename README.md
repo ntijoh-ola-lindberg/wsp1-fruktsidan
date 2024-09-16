@@ -36,7 +36,8 @@ Efter genomgång görs övningar nedan **i par**.
 6. Lägg till mer data eller funktioner som t.ex.
     * Visa stjärnor istället för ett nummer för fruktbetyg
     * Lägg till fler kolumner i databasen som t.ex. vilket land en frukt kommer ifrån eller hur mycket den kostar / kg
-    * Lägg till testdatan mha. `db/seeder.rb`
+    * Lägg till testdatan mha. *DB Browser*
+    * Lägg till testdatan mha. `db/seeder.rb`. Vad hände med datan du la till i *DB Browser*?
 
 ## Genomgång 2
 * Hur hänger allt ihop?

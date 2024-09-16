@@ -45,4 +45,10 @@ class App < Sinatra::Base
         erb(:"fruits/show")
     end
 
+    #Routen tar bort frukten med @id
+    post '/fruits/:id/delete' do | id |
+      db.execute("DELETE FROM fruits WHERE id =?", id)
+      redirect("/fruits")
+    end
+
 end

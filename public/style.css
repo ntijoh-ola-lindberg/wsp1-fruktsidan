@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     color: #666;
-    background-color: #F1F1F1;
+    background-color: #f1f1f1;
     font-size: x-large;
     margin: 1em;
 }
@@ -16,6 +16,16 @@ a {
 
 form {
     display: inline-block;
+}
+
+form.delete input {
+    border: 1px solid #ccc;
+    background-color: bisque;
+}
+
+form.delete input:hover {
+    cursor: pointer;
+    background-color: burlywood;
 }
 
 img {
@@ -65,5 +75,5 @@ blockquote {
     color: black;
     padding: 2em;
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
 }

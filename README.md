@@ -60,7 +60,7 @@ Efter genomgång görs övningar nedan **i par**.
 1. Gör *SQLBolt* t.o.m. **övning 15**.
 2. Lägg till ett formulär för att skapa en ny frukt. Börja med routen `GET '/fruits/new'`.
     * För att spara frukten behöver du skicka datat från formuläret till `POST '/fruits/new'`.
-3. Gör en knapp som tar bort en frukt.
+3. Gör en knapp som tar bort en frukt. Postar till `post '/fruits/:id/delete'`
 4. Utöka funktionerna.
     * Utforska och lägg till de funktioner du tycker behövs
     * Lägg till bilder (eller ikoner) till frukterna

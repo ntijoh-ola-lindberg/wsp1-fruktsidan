@@ -1,5 +1,5 @@
 # Webbserverprogrammering 1 - Övning 2
-Exempel-projekt nummer 2 med övningar till kursen Webbserverprogrammering 1 på NTI Gymnasiet Johanneberg. 
+Exempel-projekt nummer 2 med övningar till kursen Webbserverprogrammering 1 på NTI Gymnasiet Johanneberg.
 Efter genomgång görs övningar nedan **i par**.
 
 ![Skärmbild på sidan vi kommer arbeta med](docs/img/fruktparadiset.png)
@@ -23,7 +23,7 @@ Efter genomgång görs övningar nedan **i par**.
     * *SQLBolt*
     * `db/seeder.rb`
     * `db/fruits.sqlite`
-    * `app.rb/db-metoden` 
+    * `app.rb/db-metoden`
     * `views/layout.erb`
     * `db.execute('SELECT * FROM fruits WHERE id=?',id).first`
 
@@ -33,7 +33,7 @@ Efter genomgång görs övningar nedan **i par**.
 3. Lägg till ca 5 nya frukter mha. `db/seeder.rb`. För att spara datan till databasen kör du `rake seed`
 4. Öppna databasfilen i DBBrowser och dubbelkolla så du ser din data även där.
 5. Visa all info om en frukt på routen `'/fruits/:id'`
-6. Lägg till mer data eller funktioner som t.ex. 
+6. Lägg till mer data eller funktioner som t.ex.
     * Visa stjärnor istället för ett nummer för fruktbetyg
     * Lägg till fler kolumner i databasen som t.ex. vilket land en frukt kommer ifrån eller hur mycket den kostar / kg
     * Lägg till testdatan mha. `db/seeder.rb`
@@ -47,6 +47,8 @@ Efter genomgång görs övningar nedan **i par**.
 ### Uppgifter 2
 1. Gör *SQLBolt* t.o.m. **övning 10**.
 2. Gör alla uppgifter på #1
+3. Lägg till funktioner du kan komma på till fruktshoppen
+4. Börja kämpa med nästa veckas uppgifter (uppgifter #3)
 
 ## Genomgång 3 (todo)
 * [Spara data](https://ntijoh.github.io/webbserverprogrammeringsboken/#_insert) med [formulär](https://ntijoh.github.io/webbserverprogrammeringsboken/#_formulär)
@@ -55,7 +57,7 @@ Efter genomgång görs övningar nedan **i par**.
 
 ### Uppgifter 3
 1. Gör *SQLBolt* t.o.m. **övning 15**.
-2. Lägg till ett formulär för att skapa en ny frukt. Börja med routen `GET '/fruits/new'`. 
+2. Lägg till ett formulär för att skapa en ny frukt. Börja med routen `GET '/fruits/new'`.
     * För att spara frukten behöver du skicka datat från formuläret till `POST '/fruits/new'`.
 3. Gör en knapp som tar bort en frukt.
 4. Utöka funktionerna.

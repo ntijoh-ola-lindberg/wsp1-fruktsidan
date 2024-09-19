@@ -39,16 +39,34 @@ class App < Sinatra::Base
       redirect("/fruits")
     end
 
-    # Övning no. 1
-    # Routen visar all info (från databasen) om en frukt.
+    # Routen visar all info (från databasen) om en frukt
     get '/fruits/:id' do | id |
       #todo hämta data från databasen för frukten med id
       erb(:"fruits/show")
     end
 
-    #Routen tar bort frukten med @id
+    # Routen tar bort frukten med id
     post '/fruits/:id/delete' do | id |
       db.execute("DELETE FROM fruits WHERE id =?", id)
+      redirect("/fruits")
+    end
+
+    # Routen visar ett formulär på edit.erb för att ändra frukten med id
+    get '/fruits/:id/edit' do | id |
+      @fruit = db.execute('SELECT * FROM fruits WHERE id=?', id).first
+      erb(:"fruits/edit")
+    end
+
+    # Routen sparar ändringarna från formuläret
+    post "/fruits/:id/update" do | id |
+      name = params["fruit_name"]
+      category = params["fruit_description"]
+
+      sql = "UPDATE fruits
+              SET name =?, description=?
+              WHERE id =?"
+      db.execute(sql, [name, category, id])
+
       redirect("/fruits")
     end
 

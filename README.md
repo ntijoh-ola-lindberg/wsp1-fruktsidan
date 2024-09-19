@@ -51,24 +51,30 @@ Efter genomgång görs övningar nedan **i par**.
 3. Lägg till funktioner du kan komma på till fruktshoppen
 4. Börja kämpa med nästa veckas uppgifter (uppgifter #3)
 
-## Genomgång 3 (todo)
-* [Spara data](https://ntijoh.github.io/webbserverprogrammeringsboken/#_insert) med [formulär](https://ntijoh.github.io/webbserverprogrammeringsboken/#_formulär)
-* GET vs. POST
+## Genomgång 3
+* Föreläsningen heter **5 - Ta bort frukt + Spara ny frukt**
+* [HTTP Requests & Response + GET & POST](https://ntijoh.github.io/webbserverprogrammeringsboken/#_requests_routing) (till Routes for *CRUD*)
+* [Formulär](https://ntijoh.github.io/webbserverprogrammeringsboken/#_formul%C3%A4r)
+* SQL: [Delete](https://ntijoh.github.io/webbserverprogrammeringsboken/#_action_delete_route_messagesiddelete_method_post) & [Inserts](https://ntijoh.github.io/webbserverprogrammeringsboken/#_insert)
 * Params
 
 ### Uppgifter 3
-1. Gör *SQLBolt* t.o.m. **övning 15**.
-2. Lägg till ett formulär för att skapa en ny frukt. Börja med routen `GET '/fruits/new'`.
-    * För att spara frukten behöver du skicka datat från formuläret till `POST '/fruits/new'`.
-3. Gör en knapp som tar bort en frukt. Postar till `post '/fruits/:id/delete'`
+1. Gör en knapp (& formulär) som tar bort en frukt.\
+   Använd routen: `post '/fruits/:id/delete'`
+2. Lägg till ett formulär för att spara en ny frukt.\
+   Använd routen `GET '/fruits/new'` och filen `new.erb`
+3. Gör routen som sparar datan till databasen: `POST '/fruits/new'`.
 4. Utöka funktionerna.
+    * Arbeta vidare med *SQLBolt*
     * Utforska och lägg till de funktioner du tycker behövs
     * Lägg till bilder (eller ikoner) till frukterna
+    * Börja kämpa med nästa veckas uppgifter (#4)
 
 ## Genomgång 4 (todo)
 * [Uppdatera data](https://ntijoh.github.io/webbserverprogrammeringsboken/#_requests_routing)
 * C.R.U.D.
 
 ### Uppgifter 4
-* Lägg funktioner för att uppdatera datan för en frukt
-* Lägg till kategorier för frukter & grönsaker
+1. Gör *SQLBolt* t.o.m. **övning 15**.
+2. Lägg funktioner för att uppdatera datan för en frukt
+3. Lägg till kategorier för frukter & grönsaker

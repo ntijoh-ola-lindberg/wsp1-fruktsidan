@@ -52,7 +52,7 @@ Efter genomgång görs övningar nedan **i par**.
 4. Börja kämpa med nästa veckas uppgifter (uppgifter #3)
 
 ## Genomgång 3
-* Föreläsningen heter **5 - Ta bort frukt + Spara ny frukt**
+* Föreläsningen: **5 - Ta bort frukt + Spara ny frukt**
 * [HTTP Requests & Response + GET & POST](https://ntijoh.github.io/webbserverprogrammeringsboken/#_requests_routing) (till Routes for *CRUD*)
 * [Formulär](https://ntijoh.github.io/webbserverprogrammeringsboken/#_formul%C3%A4r)
 * SQL: [Delete](https://ntijoh.github.io/webbserverprogrammeringsboken/#_action_delete_route_messagesiddelete_method_post) & [Inserts](https://ntijoh.github.io/webbserverprogrammeringsboken/#_insert)

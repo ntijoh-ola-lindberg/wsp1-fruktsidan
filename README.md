@@ -77,8 +77,9 @@ Efter genomgång görs övningar nedan **i par**.
 * C.R.U.D.
 
 ### Uppgifter 4
-1. Lägg funktioner för att uppdatera datan för en frukt
-2. Samanfatta i loggboken vad du lärt dig på dessa 4 lektioner. Markera även i betygsmatrisen (i loggboken) vad du tycker du kan och inte kan.
-3. Gör *SQLBolt* t.o.m. **övning 15**.
-4. Lägg till kategorier för frukter & grönsaker
-5. Lägg till funktioner du tycker + gör färdigt allt du inte hunnit tidigare
+1. Gör ett sekvensdiagram för hur uppdateringen av en frukt går till. Lägg det i loggboken.
+2. Lägg funktioner för att uppdatera datan för en frukt
+3. Samanfatta i loggboken vad du lärt dig på dessa 4 lektioner. Markera även i betygsmatrisen (i loggboken) vad du tycker du kan och inte kan.
+4. Gör *SQLBolt* t.o.m. **övning 15**.
+5. Lägg till kategorier för frukter & grönsaker
+6. Lägg till funktioner du tycker + gör färdigt allt du inte hunnit tidigare

@@ -61,10 +61,11 @@ Efter genomgång görs övningar nedan **i par**.
 ### Uppgifter 3
 1. Gör en knapp (& formulär) som tar bort en frukt.\
    Använd routen: `post '/fruits/:id/delete'`
-2. Lägg till ett formulär för att spara en ny frukt.\
+2. Rita ett sekvensdiagram för hur det ser ut när ni sparar en ny frukt. Bifoga det i din loggbok. Använd: https://www.websequencediagrams.com/app
+3. Lägg till ett formulär för att spara en ny frukt.\
    Använd routen `GET '/fruits/new'` och filen `new.erb`
-3. Gör routen som sparar datan till databasen: `POST '/fruits/new'`.
-4. Utöka funktionerna.
+4. Gör routen som sparar datan till databasen: `POST '/fruits/new'`.
+5. Utöka funktionerna.
     * Arbeta vidare med *SQLBolt*
     * Utforska och lägg till de funktioner du tycker behövs
     * Lägg till bilder (eller ikoner) till frukterna

@@ -65,8 +65,8 @@ Efter genomgång görs övningar nedan **i par**.
 3. Lägg till ett formulär för att spara en ny frukt.\
    Använd routen `GET '/fruits/new'` och filen `new.erb`
 4. Gör routen som sparar datan till databasen: `POST '/fruits/new'`.
-5. Utöka funktionerna.
-    * Arbeta vidare med *SQLBolt*
+5. Arbeta vidare med *SQLBolt*
+6. Utöka funktionerna.
     * Utforska och lägg till de funktioner du tycker behövs
     * Lägg till bilder (eller ikoner) till frukterna
     * Börja kämpa med nästa veckas uppgifter (#4)

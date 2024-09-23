@@ -71,11 +71,14 @@ Efter genomgång görs övningar nedan **i par**.
     * Lägg till bilder (eller ikoner) till frukterna
     * Börja kämpa med nästa veckas uppgifter (#4)
 
-## Genomgång 4 (todo)
-* [Uppdatera data](https://ntijoh.github.io/webbserverprogrammeringsboken/#_requests_routing)
+## Genomgång 4
+* Föreläsning: **6 - Uppdatera en frukt**
+* [Uppdatera data](https://ntijoh.github.io/webbserverprogrammeringsboken/#_action_edit_route_messagesidedit_method_get)
 * C.R.U.D.
 
 ### Uppgifter 4
-1. Gör *SQLBolt* t.o.m. **övning 15**.
-2. Lägg funktioner för att uppdatera datan för en frukt
-3. Lägg till kategorier för frukter & grönsaker
+1. Lägg funktioner för att uppdatera datan för en frukt
+2. Samanfatta i loggboken vad du lärt dig på dessa 4 lektioner
+3. Gör *SQLBolt* t.o.m. **övning 15**.
+4. Lägg till kategorier för frukter & grönsaker
+5. Lägg till funktioner du tycker + gör färdigt allt du inte hunnit tidigare

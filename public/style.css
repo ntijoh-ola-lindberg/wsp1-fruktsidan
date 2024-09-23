@@ -18,12 +18,19 @@ form {
     display: inline-block;
 }
 
-form.delete input {
+form.delete input,
+.edit {
     border: 1px solid #ccc;
     background-color: bisque;
+    font-size: 13px !important;
+    text-decoration: none;
+    color: #333;
+    padding: 0.3em;
+    margin: 0;
 }
 
-form.delete input:hover {
+form.delete input:hover,
+.edit:hover {
     cursor: pointer;
     background-color: burlywood;
 }

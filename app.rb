@@ -41,7 +41,7 @@ class App < Sinatra::Base
 
     # Routen visar all info (från databasen) om en frukt
     get '/fruits/:id' do | id |
-      #todo hämta data från databasen för frukten med id
+      @fruit = db.execute('SELECT * FROM fruits WHERE id=?',id).first
       erb(:"fruits/show")
     end
 

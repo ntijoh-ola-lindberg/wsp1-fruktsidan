@@ -75,11 +75,24 @@ Efter genomgång görs övningar nedan **i par**.
 * Föreläsning: **6 - Uppdatera en frukt**
 * [Uppdatera data](https://ntijoh.github.io/webbserverprogrammeringsboken/#_action_edit_route_messagesidedit_method_get)
 * C.R.U.D.
+* RESTLful
+* Betygskriterier
 
 ### Uppgifter 4
-1. Gör ett sekvensdiagram för hur uppdateringen av en frukt går till. Lägg det i loggboken.
-2. Lägg funktioner för att uppdatera datan för en frukt
-3. Samanfatta i loggboken vad du lärt dig på dessa 4 lektioner. Markera även i betygsmatrisen (i loggboken) vad du tycker du kan och inte kan.
-4. Gör *SQLBolt* t.o.m. **övning 15**.
-5. Lägg till kategorier för frukter & grönsaker
-6. Lägg till funktioner du tycker + gör färdigt allt du inte hunnit tidigare
+
+1. Lägg till en ändra-knapp i `index.erb` 
+2. Lägg till ett ändra-formulär i `fruits/edit.erb`
+3. Lägg till så att ändringarna för frukten sparas till DB
+4. Gör ett sekvensdiagram för hur uppdateringen av en frukt går till. Lägg det i loggboken.
+5. Läs igenom betygskriterierna (länk finns i loggboken)
+6. Jobba vidare med *SQLBolt*
+7. Lägg till andra funktioner på fruktsidan. Du kan t.ex. lägga till kategorier, en varukorg (så jag kan köpa) eller funktioner du tycker saknas.
+8. Skriv i loggboken
+
+## Genomgång 5
+* Todo
+
+### Uppgifter 5
+* Gör färdigt fruktsidan
+* Jobba med *SQLBolt*
+* Samanfatta i loggboken vad du lärt dig sedan du började Webbserverprogramering. Markera i betygsmatrisen (i loggboken) vad du tycker du kan och inte kan.

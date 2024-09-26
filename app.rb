@@ -53,21 +53,18 @@ class App < Sinatra::Base
 
     # Routen visar ett formulär på edit.erb för att ändra frukten med id
     get '/fruits/:id/edit' do | id |
-      @fruit = db.execute('SELECT * FROM fruits WHERE id=?', id).first
-      erb(:"fruits/edit")
+      # todo: Hämta info (från databasen) om frukten med id
+
+      # todo: Visa infon i fruits/edit.erb
     end
 
     # Routen sparar ändringarna från formuläret
     post "/fruits/:id/update" do | id |
-      name = params["fruit_name"]
-      category = params["fruit_description"]
-
-      sql = "UPDATE fruits
-              SET name =?, description=?
-              WHERE id =?"
-      db.execute(sql, [name, category, id])
-
-      redirect("/fruits")
+      # todo: Läs name & category från formuläret
+      
+      # todo: Kör SQL för att uppdatera datan från formuläret
+      
+      # todo: Redirect till /fruits
     end
 
 end

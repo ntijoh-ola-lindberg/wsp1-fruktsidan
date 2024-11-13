@@ -80,14 +80,14 @@ Efter genomgång görs övningar nedan **i par**.
 
 ### Uppgifter 4
 
-1. Lägg till en ändra-knapp i `index.erb` 
-2. Lägg till ett ändra-formulär i `fruits/edit.erb`
-3. Lägg till så att ändringarna för frukten uppdateras till DB `UPDATE fruits SET name =?...`
-4. Gör ett sekvensdiagram för hur uppdateringen av en frukt går till. Lägg det i loggboken.
+1. **Innan ni öppnar datorn** gör ett sekvensdiagram för hur uppdateringen av en frukt går till. Lägg det i loggboken.
+2. Lägg till en ändra-knapp i `index.erb` 
+3. Lägg till ett ändra-formulär i `fruits/edit.erb`
+4. Lägg till så att ändringarna för frukten uppdateras till DB `UPDATE fruits SET name =?...`
 5. Läs igenom betygskriterierna (länk finns i loggboken)
 6. Jobba vidare med *SQLBolt*
 7. Lägg till andra funktioner på fruktsidan. T.ex. kategorier, varukorg (så jag kan köpa) eller andra funktioner du tycker saknas.
-8. Skriv i loggboken
+8. Skriv i loggboken. Läs igenom och se om ert sekvensdiagram fortfarande stämmer.
 
 ## Genomgång 5
 * Todo

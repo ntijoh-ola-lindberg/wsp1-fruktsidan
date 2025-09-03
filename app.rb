@@ -31,24 +31,20 @@ class App < Sinatra::Base
     # Routen sparar en frukt till databasen och gör en redirect till '/fruits'.
     post '/fruits' do
       p params
-      name = params["fruit_name"]
-      description = params["fruit_description"]
-
-      db.execute("INSERT INTO fruits (name, description) VALUES(?,?)", [name, description])
-
-      redirect("/fruits")
+      #todo: Läs ut fruit_name & fruit_description från params
+      
+      #todo: Lägg till den nya frukten i databasen
     end
 
     # Routen visar all info (från databasen) om en frukt
     get '/fruits/:id' do | id |
-      @fruit = db.execute('SELECT * FROM fruits WHERE id=?',id).first
-      erb(:"fruits/show")
+      #todo välj ut frukten med it:t
+      #Visa i rätt ERB-fil
     end
 
     # Routen tar bort frukten med id
     post '/fruits/:id/delete' do | id |
-      db.execute("DELETE FROM fruits WHERE id =?", id)
-      redirect("/fruits")
+      #todo: Ta bort frukten i databasen med id:t
     end
 
     # Routen visar ett formulär på edit.erb för att ändra frukten med id
@@ -63,8 +59,6 @@ class App < Sinatra::Base
       # todo: Läs name & category från formuläret
       
       # todo: Kör SQL för att uppdatera datan från formuläret
-      
-      # todo: Redirect till /fruits
     end
 
 end

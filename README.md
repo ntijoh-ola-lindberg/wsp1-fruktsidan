@@ -15,6 +15,16 @@ Efter genomgång görs övningar nedan **i par**.
 * https://sqlbolt.com/
 * https://sqlitebrowser.org/
 
+## Intro
+* Titta på webbsidan
+* Titta på alla routes inklusive de som är bara kommentarer
+* Titta på views
+* Databaser
+* Öppna DB Browser får SQLite och testa `SELECT * FROM fruits` och testa SQL för att välja ut en frukt
+
+### Uppgifter Intro
+* Fixa så att man kan se info om en frukt
+
 ## Genomgång 1
 * Visa routes `GET /fruits` och `/views/fruits/index.erb`
 * Visa `layout.erb`

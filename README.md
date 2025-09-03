@@ -5,8 +5,8 @@ Efter genomgång görs övningar nedan **i par**.
 ![Skärmbild på sidan vi kommer arbeta med](docs/img/fruktparadiset.png)
 
 ## Komma igång
-* Ladda ner repositoriet till mappen Webbserverprogrammering på din dator. Antingen som ZIP (isåfall måste du packa upp ZIP-filen) eller så laddar du ner med: `git clone`
-* Installera: `bundle install`
+* Ladda ner repositoriet till mappen Webbserverprogrammering på din dator. Antingen som ZIP (isåfall måste du packa upp ZIP-filen) eller så laddar du ner med: `git clone` Spara mappen till din WSP-mapp dvs. bredvid förra övningen.
+* Installera: `bundle`
 * *Seeda* databasen: `rake seed`
 * Köra: `rake dev`
 * Surfa till: http://localhost:9292

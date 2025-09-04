@@ -23,7 +23,7 @@ Efter genomgång görs övningar nedan **i par**.
 * Öppna DB Browser får SQLite och testa `SELECT * FROM fruits` och testa SQL för att välja ut en frukt
 
 ### Uppgifter Intro
-* Fixa så att man kan se info om en frukt
+* Lägg till så att man kan se info om en frukt genom att klicka på frukten i listan. Ett exempel på länk som klicket ska gå till är: http://localhost:9292/fruits/2
 
 ## Genomgång 1
 * Visa routes `GET /fruits` och `/views/fruits/index.erb`

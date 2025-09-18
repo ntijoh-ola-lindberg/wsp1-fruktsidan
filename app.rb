@@ -38,8 +38,9 @@ class App < Sinatra::Base
 
     # Routen visar all info (från databasen) om en frukt
     get '/fruits/:id' do | id |
-      #todo välj ut frukten med it:t
-      #Visa i rätt ERB-fil
+      @fruit = db.execute('SELECT * FROM fruits WHERE id = ?', id).first
+      p @fruit
+      erb(:"fruits/show")
     end
 
     # Routen tar bort frukten med id

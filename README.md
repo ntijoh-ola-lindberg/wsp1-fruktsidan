@@ -17,7 +17,6 @@ Efter genomgång görs övningar nedan **i par**.
 
 ## Intro
 * Titta på webbsidan
-* Titta på alla routes inklusive de som är bara kommentarer
 * Titta på views
 * Databaser
 * Öppna DB Browser får SQLite och testa `SELECT * FROM fruits` och testa SQL för att välja ut en frukt
@@ -26,22 +25,23 @@ Efter genomgång görs övningar nedan **i par**.
 * Lägg till så att man kan se info om en frukt genom att klicka på frukten i listan. Ett exempel på länk som klicket ska gå till är: http://localhost:9292/fruits/2
 
 ## Genomgång 1
-* Visa routes `GET /fruits` och `/views/fruits/index.erb`
-* Visa `layout.erb`
+* Visa routes `GET /fruits` 
+* Visa `/views/fruits/index.erb`
+* Visa `/views/fruits/show.erb`
+* Visa `/views`-mappen
 * Visa SQL:
     * *DB Browser for SQLite*
     * *SQLBolt*
     * `db/seeder.rb`
     * `db/fruits.sqlite`
     * `app.rb/db-metoden`
-    * `views/layout.erb`
     * `db.execute('SELECT * FROM fruits WHERE id=?',id).first`
 
 ### Uppgifter 1
-1. Gör *SQLBolt* t.o.m. **övning 2**.
+1. Gör *SQLBolt* t.o.m. **övning 5**.
 2. Testa att sortera om frukterna på t.ex. ID. Du behöver uppdatera SQL-koden: `db.execute('SELECT * FROM fruits')`
 3. Lägg till ca 5 nya frukter mha. `db/seeder.rb`. För att spara datan till databasen kör du `rake seed`
-4. Öppna databasfilen i DBBrowser och dubbelkolla så du ser din data även där.
+4. Öppna databasfilen i DBBrowser och dubbelkolla så du ser dina nya frukter även där.
 5. Visa all info om en frukt på routen `'/fruits/:id'`
 6. Lägg till mer data eller funktioner som t.ex.
     * Visa stjärnor istället för ett nummer för fruktbetyg
@@ -51,6 +51,7 @@ Efter genomgång görs övningar nedan **i par**.
 
 ## Genomgång 2
 * Hur hänger allt ihop?
+* Visa `layout.erb`
 * `db.execute('SELECT * FROM fruits WHERE id=?',id).first` (igen)
 * Ruby hashes
 * SQL Injections

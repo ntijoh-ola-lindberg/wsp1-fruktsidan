@@ -3,7 +3,7 @@
 <ul>
 <% @fruits.each do |fruit| %>
   <li>
-    <%= fruit['name'] %>
+    <a href="/fruits/<%= fruit['id'] %>"><%= fruit['name'] %></a>
   </li>
 <% end %>
 </ul>

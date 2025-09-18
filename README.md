@@ -41,7 +41,6 @@ Efter genomgång görs övningar nedan **i par**.
 1. Gör *SQLBolt* t.o.m. **övning 5**.
 2. Testa att sortera om frukterna på t.ex. ID. Du behöver uppdatera SQL-koden: `db.execute('SELECT * FROM fruits')`
 3. Lägg till ca 5 nya frukter mha. `db/seeder.rb`. För att spara datan till databasen kör du `rake seed`
-4. Öppna databasfilen i DBBrowser och dubbelkolla så du ser dina nya frukter även där.
 5. Visa all info om en frukt på routen `'/fruits/:id'`
 6. Lägg till mer data eller funktioner som t.ex.
     * Visa stjärnor istället för ett nummer för fruktbetyg

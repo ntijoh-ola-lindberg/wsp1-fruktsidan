@@ -1,3 +1,7 @@
+require 'pp'
+require "awesome_print"
+
+
 class App < Sinatra::Base
 
     # Funktion för att prata med databasen
@@ -19,7 +23,7 @@ class App < Sinatra::Base
     #Routen hämtar alla frukter i databasen
     get '/fruits' do
       @fruits = db.execute('SELECT * FROM fruits')
-      p @fruits
+      ap @fruits
       erb(:"fruits/index")
     end
 
@@ -39,7 +43,7 @@ class App < Sinatra::Base
     # Routen visar all info (från databasen) om en frukt
     get '/fruits/:id' do | id |
       @fruit = db.execute('SELECT * FROM fruits WHERE id = ?', id).first
-      p @fruit
+      ap @fruit
       erb(:"fruits/show")
     end
 

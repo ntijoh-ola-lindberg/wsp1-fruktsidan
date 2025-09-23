@@ -53,7 +53,6 @@ Efter genomgång görs övningar nedan **i par**.
 * Visa `layout.erb`
 * `db.execute('SELECT * FROM fruits WHERE id=?',id).first` (igen)
 * Ruby hashes
-* SQL Injections
 
 ### Uppgifter 2
 1. Gör *SQLBolt* t.o.m. **övning 10**.
@@ -67,6 +66,7 @@ Efter genomgång görs övningar nedan **i par**.
 * [Formulär](https://ntijoh.github.io/webbserverprogrammeringsboken/#_formul%C3%A4r)
 * SQL: [Delete](https://ntijoh.github.io/webbserverprogrammeringsboken/#_action_delete_route_messagesiddelete_method_post) & [Inserts](https://ntijoh.github.io/webbserverprogrammeringsboken/#_insert)
 * Params
+* SQL Injections
 
 ### Uppgifter 3
 1. Gör en knapp (& formulär) som tar bort en frukt.\

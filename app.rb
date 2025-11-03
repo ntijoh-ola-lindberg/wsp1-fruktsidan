@@ -33,37 +33,61 @@ class App < Sinatra::Base
     end
 
     # Routen sparar en frukt till databasen och gör en redirect till '/fruits'.
+    #
+    # ToDo
+    #     1). Läs fruit_name & fruit_description från params
+    #     3). Kör SQL för att lägga till den nya frukten i databasen
+    #     4). Redirect
     post '/fruits' do
-      p params
-      #todo: Läs ut fruit_name & fruit_description från params
-      
-      #todo: Lägg till den nya frukten i databasen
+      ap params
+      name = params["fruit_name"]
+      description = params["fruit_description"]
+
+      db.execute("INSERT INTO fruits (name, description) VALUES(?,?)", [name, description])
+
+      redirect("/fruits")
     end
 
-    # Routen visar all info (från databasen) om en frukt
+    # Routen visar all info för frukten med id:t
     get '/fruits/:id' do | id |
-      @fruit = db.execute('SELECT * FROM fruits WHERE id = ?', id).first
+      @fruit = db.execute('SELECT * FROM fruits WHERE id=?', id).first
       ap @fruit
       erb(:"fruits/show")
     end
 
     # Routen tar bort frukten med id
     post '/fruits/:id/delete' do | id |
-      #todo: Ta bort frukten i databasen med id:t
+      db.execute("DELETE FROM fruits WHERE id =?", id)
+      
+      redirect("/fruits")
     end
 
-    # Routen visar ett formulär på edit.erb för att ändra frukten med id
+    # Routen visar ett formulär på edit.erb med datan för frukten med id
+    #
+    # ToDo
+    #     1). Hämta info (från databasen) om frukten med id
+    #     2). Visa infon i fruits/edit.erb
     get '/fruits/:id/edit' do | id |
-      # todo: Hämta info (från databasen) om frukten med id
-
-      # todo: Visa infon i fruits/edit.erb
+      ap "Hämtar info om frukten med id: #{id}"
+      @fruit = db.execute('SELECT * FROM fruits WHERE id=?', id).first
+      ap @fruit
+      erb(:"fruits/edit")
     end
 
     # Routen sparar ändringarna från formuläret
+    #
+    # ToDo
+    #     1). Läs fruktens namn + beskrivning från params (formuläret)
+    #     2). Kör SQL för att uppdatera datan i databasen
+    #     3). Redirect
     post "/fruits/:id/update" do | id |
-      # todo: Läs name & category från formuläret
-      
-      # todo: Kör SQL för att uppdatera datan från formuläret
+      f_name = params["fruit_name"]
+      f_category = params["fruit_description"]
+
+      sql = "UPDATE fruits SET name =?, description=? WHERE id =?"
+      db.execute(sql, [f_name, f_category, id])
+
+      redirect("/fruits")
     end
 
 end

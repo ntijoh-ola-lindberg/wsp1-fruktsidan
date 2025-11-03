@@ -3,7 +3,11 @@
 <ul>
 <% @fruits.each do |fruit| %>
   <li>
-    <a href="/fruits/<%= fruit['id'] %>"><%= fruit['name'] %></a>
+    <a href="/fruits/<%= fruit['id']%>"><%= fruit['name'] %></a>
+    <form class="delete" action="/fruits/<%=fruit["id"]%>/delete" method="post">
+        <input type="submit" value="Ta bort">
+    </form>
+    <a class="edit" href="/fruits/<%=fruit["id"]%>/edit">Ändra</a>
   </li>
 <% end %>
 </ul>

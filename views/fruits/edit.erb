@@ -1,3 +1,7 @@
 <h2>Uppdatera frukt</h2>
 
-<blockquote>Todo: Visa all information on frukten (med ID) i ett formulär</blockquote>
+<form action="/fruits/<%= @fruit['id']%>/update" method="post">
+<label>Frukt <input type="text" name="fruit_name" value="<%= @fruit['name']%>"></label>
+<label>Beskrivning <input type="text" name="fruit_description" value="<%= @fruit['description']%>"></label>
+<input type="submit" value="Uppdatera">
+</form>

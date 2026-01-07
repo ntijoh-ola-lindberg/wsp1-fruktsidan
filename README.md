@@ -15,7 +15,7 @@ Det går att fortsätta utveckla butiken genom att t.ex. lägga till nya slags p
 
 ## Installation
 
-1. Ladda ner repositoriet till mappen Webbserverprogrammering på din dator. Antingen som ZIP (isåfall måste du packa upp ZIP-filen) eller så laddar du ner med: `git clone` Spara mappen till din WSP-mapp dvs. bredvid förra övningen.
+1. Ladda ner repositoriet till mappen Webbserverprogrammering på din dator. Antingen som ZIP (isåfall måste du packa upp ZIP-filen) eller så laddar du ner med: `git clone` Spara mappen till din WSP-mapp.
 2. `bundle install` | Installerar de biblotek (tex. SQLite) du behöver
 3. `rake` | Startar appen. Finns det ingen databas skapas en ny i `db/sqlite.db`
 4. `ctrl + c` | Stänger webbservern

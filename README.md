@@ -1,19 +1,27 @@
 # Webbserverprogrammering 1 - Övning 2
-Första projektet i kursen Webbserverprogrammering 1 på NTI Gymnasiet Johanneberg. Efter genomgång görs övningar nedan **i par**.
+Första projektet i kursen Webbserverprogrammering 1 på NTI Gymnasiet Johanneberg. Efter genomgång görs övningar **i par**.
 
 ![Skärmbild på sidan vi kommer arbeta med](docs/img/fruktparadiset.png)
 
-## Komma igång
-* Ladda ner repositoriet till mappen Webbserverprogrammering på din dator. Antingen som ZIP (isåfall måste du packa upp ZIP-filen) eller så laddar du ner med: `git clone` Spara mappen till din WSP-mapp dvs. bredvid förra övningen.
+## Lärandemål
 
-### 
+Steg för seg bygger vi upp en lista över vilka frukter vår affär har i sitt lager. Målet med projektet är att:
 
-1. `bundle install` | Installerar de biblotek (tex. SQLite) du behöver
-2. `rake` | Startar appen. Finns det ingen databas skapas en ny i `db/sqlite.db`
-3. `ctrl + c` | Stänger webbservern
-4. `rake seed` | Återställer databasen från seed-filen
-5. http://localhost:9292 | Adressen till din webbapp
-6. `rake kill` | Stänger av alla Ruby om du t.ex. har problem att få igång webbservern med felmeddelande ungefär som `Address already in use - bind(2) for 0.0.0.0:9292` 
+- Bli bekanta med hur en webbapp hänger ihop
+- Kunna förklara vad som händer när en användare lägger till en ny produkt
+- Bli bekanta medb databaser och SQL
+
+Det går att fortsätta utveckla butiken genom att t.ex. lägga till nya slags produkter som `/bread` eller inloggning med varukorg t.ex. 
+
+## Installation
+
+1. Ladda ner repositoriet till mappen Webbserverprogrammering på din dator. Antingen som ZIP (isåfall måste du packa upp ZIP-filen) eller så laddar du ner med: `git clone` Spara mappen till din WSP-mapp dvs. bredvid förra övningen.
+2. `bundle install` | Installerar de biblotek (tex. SQLite) du behöver
+3. `rake` | Startar appen. Finns det ingen databas skapas en ny i `db/sqlite.db`
+4. `ctrl + c` | Stänger webbservern
+5. `rake seed` | Återställer databasen från seed-filen
+6. http://localhost:9292 | Adressen till din webbapp
+7. `rake kill` | Stänger av alla Ruby om du t.ex. har problem att få igång webbservern med felmeddelande ungefär som `Address already in use - bind(2) for 0.0.0.0:9292` 
 
 Använd verktyget `DB Browser for SQLite` för att titta på, arbeta fram och testa SQL-kod.
 
@@ -21,94 +29,3 @@ Använd verktyget `DB Browser for SQLite` för att titta på, arbeta fram och te
 * https://sqlbolt.com/
 * https://sqlitebrowser.org/
 
-## Intro
-* Titta på webbsidan
-* Titta på views
-* Databaser
-* Öppna DB Browser får SQLite och testa `SELECT * FROM fruits` och testa SQL för att välja ut en frukt
-
-### Uppgifter Intro
-* Lägg till så att man kan se info om en frukt genom att klicka på frukten i listan. Ett exempel på länk som klicket ska gå till är: http://localhost:9292/fruits/2
-
-## Genomgång 1
-* Visa routes `GET /fruits` 
-* Visa `/views/fruits/index.erb`
-* Visa `/views/fruits/show.erb`
-* Visa `/views`-mappen
-* Visa SQL:
-    * *DB Browser for SQLite*
-    * *SQLBolt*
-    * `db/seeder.rb`
-    * `db/fruits.sqlite`
-    * `app.rb/db-metoden`
-    * `db.execute('SELECT * FROM fruits WHERE id=?',id).first`
-
-### Uppgifter 1
-1. Gör *SQLBolt* t.o.m. **övning 5**.
-2. Testa att sortera om frukterna på t.ex. ID. Du behöver uppdatera SQL-koden: `db.execute('SELECT * FROM fruits')`
-3. Lägg till ca 5 nya frukter mha. `db/seeder.rb`. För att spara datan till databasen kör du `rake seed`
-5. Visa all info om en frukt på routen `'/fruits/:id'`
-6. Lägg till mer data eller funktioner som t.ex.
-    * Visa stjärnor istället för ett nummer för fruktbetyg
-    * Lägg till fler kolumner i databasen som t.ex. vilket land en frukt kommer ifrån eller hur mycket den kostar / kg
-    * Lägg till testdatan mha. *DB Browser*
-    * Lägg till testdatan mha. `db/seeder.rb`. Vad hände med datan du la till i *DB Browser*?
-
-## Genomgång 2
-* Hur hänger allt ihop?
-* Visa `layout.erb`
-* `db.execute('SELECT * FROM fruits WHERE id=?',id).first` (igen)
-* Ruby hashes
-
-### Uppgifter 2
-1. Gör *SQLBolt* t.o.m. **övning 10**.
-2. Gör alla uppgifter på #1
-3. Lägg till funktioner du kan komma på till fruktshoppen
-4. Börja kämpa med nästa veckas uppgifter (uppgifter #3)
-
-## Genomgång 3
-* Föreläsningen: **5 - Ta bort frukt + Spara ny frukt**
-* [HTTP Requests & Response + GET & POST](https://ntijoh.github.io/webbserverprogrammeringsboken/#_requests_routing) (till Routes for *CRUD*)
-* [Formulär](https://ntijoh.github.io/webbserverprogrammeringsboken/#_formul%C3%A4r)
-* SQL: [Delete](https://ntijoh.github.io/webbserverprogrammeringsboken/#_action_delete_route_messagesiddelete_method_post) & [Inserts](https://ntijoh.github.io/webbserverprogrammeringsboken/#_insert)
-* Params
-* SQL Injections
-
-### Uppgifter 3
-1. Gör en knapp (& formulär) som tar bort en frukt.\
-   Använd routen: `post '/fruits/:id/delete'`
-2. Rita ett sekvensdiagram för hur det ser ut när ni sparar en ny frukt. Bifoga det i din loggbok. Använd: https://www.websequencediagrams.com/app
-3. Lägg till ett formulär för att spara en ny frukt.\
-   Använd routen `GET '/fruits/new'` och filen `new.erb`
-4. Gör routen som sparar datan till databasen: `POST '/fruits/new'`.
-5. Arbeta vidare med *SQLBolt*
-6. Utöka funktionerna.
-    * Utforska och lägg till de funktioner du tycker behövs
-    * Lägg till bilder (eller ikoner) till frukterna
-    * Börja kämpa med nästa veckas uppgifter (#4)
-
-## Genomgång 4
-* Föreläsning: **6 - Uppdatera en frukt**
-* [Uppdatera data](https://ntijoh.github.io/webbserverprogrammeringsboken/#_action_edit_route_messagesidedit_method_get)
-* C.R.U.D.
-* RESTLful
-* Betygskriterier
-
-### Uppgifter 4
-
-1. **Innan ni öppnar datorn** gör ett sekvensdiagram för hur uppdateringen av en frukt går till. Lägg det i loggboken.
-2. Lägg till en ändra-knapp i `index.erb` 
-3. Lägg till ett ändra-formulär i `fruits/edit.erb`
-4. Lägg till så att ändringarna för frukten uppdateras till DB `UPDATE fruits SET name =?...`
-5. Läs igenom betygskriterierna (länk finns i loggboken)
-6. Jobba vidare med *SQLBolt*
-7. Lägg till andra funktioner på fruktsidan. T.ex. kategorier, varukorg (så jag kan köpa) eller andra funktioner du tycker saknas.
-8. Skriv i loggboken. Läs igenom och se om ert sekvensdiagram fortfarande stämmer.
-
-## Genomgång 5
-* Todo
-
-### Uppgifter 5
-* Gör färdigt fruktsidan
-* Jobba med *SQLBolt*
-* Samanfatta i loggboken vad du lärt dig sedan du började Webbserverprogramering. Markera i betygsmatrisen (i loggboken) vad du tycker du kan och inte kan.

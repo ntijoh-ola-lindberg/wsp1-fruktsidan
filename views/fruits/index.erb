@@ -1,7 +1,7 @@
 <h2>Alla frukter i butiken</h2>
 
 <ul>
-<% @fruits.each do |fruit| %>
+<% @fruits.each do |fruit|%>
   <li>
     <a href="/fruits/<%= fruit['id']%>"><%= fruit['name'] %></a>
     <form class="delete" action="/fruits/<%=fruit["id"]%>/delete" method="post">

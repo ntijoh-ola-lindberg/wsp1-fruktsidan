@@ -6,7 +6,7 @@ class App < Sinatra::Base
     setup_development_features(self)
 
     # Funktion för att prata med databasen
-    # Exempel på användning: db.execute('SELECT * FROM fruits')
+    # Exempel på användning: db.execute('SELECT * FROM products')
     def db
       return @db if @db
 
@@ -23,7 +23,7 @@ class App < Sinatra::Base
 
     #Routen hämtar alla frukter i databasen
     get '/fruits' do
-      @fruits = db.execute('SELECT * FROM fruits')
+      @fruits = db.execute('SELECT * FROM products')
       ap @fruits
       erb(:"fruits/index")
     end
@@ -44,21 +44,21 @@ class App < Sinatra::Base
       name = params["fruit_name"]
       description = params["fruit_description"]
 
-      db.execute("INSERT INTO fruits (name, description) VALUES(?,?)", [name, description])
+      db.execute("INSERT INTO products (name, description) VALUES(?,?)", [name, description])
 
       redirect("/fruits")
     end
 
     # Routen visar all info för frukten med id:t
     get '/fruits/:id' do | id |
-      @fruit = db.execute('SELECT * FROM fruits WHERE id=?', id).first
+      @fruit = db.execute('SELECT * FROM products WHERE id=?', id).first
       ap @fruit
       erb(:"fruits/show")
     end
 
     # Routen tar bort frukten med id
     post '/fruits/:id/delete' do | id |
-      db.execute("DELETE FROM fruits WHERE id =?", id)
+      db.execute("DELETE FROM products WHERE id =?", id)
       
       redirect("/fruits")
     end
@@ -70,7 +70,7 @@ class App < Sinatra::Base
     #     2). Visa infon i fruits/edit.erb
     get '/fruits/:id/edit' do | id |
       ap "Hämtar info om frukten med id: #{id}"
-      @fruit = db.execute('SELECT * FROM fruits WHERE id=?', id).first
+      @fruit = db.execute('SELECT * FROM products WHERE id=?', id).first
       ap @fruit
       erb(:"fruits/edit")
     end
@@ -85,7 +85,7 @@ class App < Sinatra::Base
       f_name = params["fruit_name"]
       f_category = params["fruit_description"]
 
-      sql = "UPDATE fruits SET name =?, description=? WHERE id =?"
+      sql = "UPDATE products SET name =?, description=? WHERE id =?"
       db.execute(sql, [f_name, f_category, id])
 
       redirect("/fruits")

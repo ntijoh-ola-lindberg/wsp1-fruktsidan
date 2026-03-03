@@ -28,11 +28,11 @@ class Seeder
   end
 
   def self.drop_tables
-    db.execute('DROP TABLE IF EXISTS fruits')
+    db.execute('DROP TABLE IF EXISTS products')
   end
 
   def self.create_tables
-    db.execute('CREATE TABLE fruits (
+    db.execute('CREATE TABLE products (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 name TEXT NOT NULL,
                 tastiness INTEGER,
@@ -40,10 +40,10 @@ class Seeder
   end
 
   def self.populate_tables
-    db.execute('INSERT INTO fruits (name, tastiness, description) VALUES ("Äpple",  7, "En rund frukt som finns i många olika färger.")')
-    db.execute('INSERT INTO fruits (name, tastiness, description) VALUES ("Päron",  6, "En nästan rund, men lite avläng, frukt. Oftast mjukt fruktkött.")')
-    db.execute('INSERT INTO fruits (name, tastiness, description) VALUES ("Banan",  4, "En avlång gul frukt.")')
-    db.execute('INSERT INTO fruits (name, tastiness, description) VALUES ("Mango",  9, "En god (kanske) frukt med jobbig kärna i mitten.")')
+    db.execute('INSERT INTO products (name, tastiness, description) VALUES ("Äpple",  7, "En rund frukt som finns i många olika färger.")')
+    db.execute('INSERT INTO products (name, tastiness, description) VALUES ("Päron",  6, "En nästan rund, men lite avläng, frukt. Oftast mjukt fruktkött.")')
+    db.execute('INSERT INTO products (name, tastiness, description) VALUES ("Banan",  4, "En avlång gul frukt.")')
+    db.execute('INSERT INTO products (name, tastiness, description) VALUES ("Mango",  9, "En god (kanske) frukt med jobbig kärna i mitten.")')
   end
 
 end

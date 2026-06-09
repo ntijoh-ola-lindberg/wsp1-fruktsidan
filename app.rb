@@ -1,9 +1,8 @@
 require 'debug'
 require "awesome_print"
 
-
 class App < Sinatra::Base
-    setup_development_features(self)
+    register Sinatra::Reloader
 
     # Funktion för att prata med databasen
     # Exempel på användning: db.execute('SELECT * FROM products')
@@ -59,7 +58,7 @@ class App < Sinatra::Base
     # Routen tar bort frukten med id
     post '/fruits/:id/delete' do | id |
       db.execute("DELETE FROM products WHERE id =?", id)
-      
+
       redirect("/fruits")
     end
 

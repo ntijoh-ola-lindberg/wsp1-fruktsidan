@@ -30,7 +30,7 @@ Appen körs på http://localhost:9292
 
 ## Verktyg
 
-Använd `DB Browser for SQLite` för att titta på, arbeta fram och testa SQL-kod.
+Använd `DB Browser for SQLite` för att titta på, arbeta fram och testa SQL-kod. Öva SQL i `SQLBolt`.
 
 ## Länkar
 

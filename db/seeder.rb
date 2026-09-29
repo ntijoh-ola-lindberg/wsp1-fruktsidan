@@ -3,6 +3,7 @@ require_relative '../config'
 
 db = SQLite3::Database.new(DB_PATH)
 
+puts "Använder databasen: #{DB_PATH}"
 puts "🧹 Tar bort gamla tabeller..."
 db.execute('DROP TABLE IF EXISTS products')
 
